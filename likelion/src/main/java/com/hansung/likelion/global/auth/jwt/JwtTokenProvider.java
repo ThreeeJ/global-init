@@ -74,6 +74,7 @@ public class JwtTokenProvider {
                 .setSigningKey(key) // 서명 검증에 사용할 키를 설정합니다.
                 .build()
                 .parseClaimsJws(token) // 토큰을 파싱하고 서명을 검증합니다.
+                // 서명 검증, 만료 시간, 형식 검증, 다양한 기본적인 검사들 수행
                 .getBody(); // Payload(Claims) 부분을 반환합니다.
     }
 
